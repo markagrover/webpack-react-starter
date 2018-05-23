@@ -1,0 +1,11 @@
+{
+  "name": "indecision",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Mark Grover",
+  "license": "ISC"
+}
