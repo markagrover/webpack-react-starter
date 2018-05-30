@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/styles/src/styles/styles.scss"],"names":[],"mappings":"AAEA,KACI,qBAHc","file":"style.css","sourcesContent":["$brand-color: blue;\n\nbody {\n    background-color: $brand-color;\n}\n"],"sourceRoot":""}

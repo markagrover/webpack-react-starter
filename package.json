@@ -4,8 +4,38 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "serve": "live-server public",
+    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react",
+    "watch": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
+    "dev-server": "webpack-dev-server",
+    "start:dev": "concurrently \"npm run dev-server\" \"npm run build:dev\"",
+    "start:prod": "concurrently \"npm run dev-server\" \"npm run build:prod\""
   },
   "author": "Mark Grover",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": "https://github.com/markagrover/learning-react-16.git",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1",
+    "concurrently": "^3.5.1",
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.9.0",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.0.0",
+    "webpack-dev-server": "^4.0.0"
+  },
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "webpack-cli": "^2.1.4"
+  }
 }
